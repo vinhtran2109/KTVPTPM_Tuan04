@@ -1,0 +1,13 @@
+# Base image
+FROM python:3.9
+
+# Thiết lập biến môi trường
+ENV APP_ENV=development
+
+WORKDIR /app
+
+# Copy source code
+COPY app.py .
+
+# Chạy ứng dụng
+CMD ["python", "app.py"]
